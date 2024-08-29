@@ -1,0 +1,80 @@
+/* style.css */
+
+/* Define color scheme */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --accent-color: #e74c3c;
+    --font-color: #34495e;
+    --background-color: #ffffff;
+}
+
+/* Apply global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--accent-color);
+}
+
+/* Style the welcome message */
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
+
+h3 {
+    text-align: center;
+    margin: 1rem 2rem;
+    color: var(--font-color);
+}
+
+/* Style the profile picture */
+.container img {
+    display: block;
+    margin: 2rem auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: profilePicAnimation 5s infinite alternate;
+}
+
+/* Define the animation */
+@keyframes profilePicAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
